@@ -11,7 +11,6 @@ aa_test = list(list(three = "p.Ala123", one = "p.A123"),
                list(three = "p.Ala1023IlefsTer19", one = "p.A1023Ifs*19"),
                list(three = "p.Asp1028IlefsTer19", one = "p.D1028IfsTer19"))
 
-
 for(i in seq_along(aa_test)){
   test_that("Amino acid changes one to three", {
     expect_equal(amino_code_conversion_one_to_three(aa_test[[i]]$one), aa_test[[i]]$three)

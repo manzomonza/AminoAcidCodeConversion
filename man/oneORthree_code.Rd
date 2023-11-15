@@ -9,6 +9,9 @@ oneORthree_code(amino_acid_change)
 \arguments{
 \item{amino_acid_change}{}
 }
+\value{
+"one" or "three"
+}
 \description{
 Single or three letter code
 }
