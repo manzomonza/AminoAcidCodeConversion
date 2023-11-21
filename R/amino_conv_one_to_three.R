@@ -29,11 +29,15 @@ amino_code_conversion_one_to_three = function(protein_change_string){
     substitute_list = c(substitute_list,'')
     one_to_three = paste0(c(rbind(no_upper, substitute_list)), collapse = '')
     return(one_to_three)
-    }else{
-      return(NA)
-    }
+  }else{
+    return(protein_change_string)
+  }
+  }else{
+    return(NA)
   }
 }
+
+
 
 #' ###### Change three to one letter code
 #'
@@ -43,7 +47,7 @@ amino_code_conversion_one_to_three = function(protein_change_string){
 #' @export
 #'
 #' @examples
-amino_acid_conversion_three_to_one <- function(protein_change_string){
+amino_code_conversion_three_to_one <- function(protein_change_string){
   amino_acid_change_parse = protein_change_string
   if(!is.na(protein_change_string) & !grepl("p\\.\\?", protein_change_string) ){
     if(oneORthree_code(protein_change_string) == "three"){
